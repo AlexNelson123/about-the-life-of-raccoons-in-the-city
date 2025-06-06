@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Документ без названия</title>
+		<style>
+			html, body {
+				width: 100%;
+				height: 100%;
+				margin: 0;
+				padding: 0;
+				overflow-x: hidden;
+				background-color: #000000;
+				font-family: sans-serif;
+			}
+			#main {
+				position: relative;
+				width: 100vw;
+				min-width: 100vw;
+				height: auto;
+				overflow: hidden;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				background-color: transparent;
+			}
+
+			.foreground-img {
+				width: 100vw;
+				min-width: 100vw;
+				height: auto;
+				object-fit: contain;
+				z-index: 2;
+				display: block;
+			}
+			.close-btn2 {
+				display: block;
+				position: absolute;
+				object-fit: cover;
+				background-color: rgba(0, 0, 0, 0);
+				border: none;
+				cursor: pointer;
+				z-index: 11;
+				top: 74%;
+				left: 46%;
+			}
+			.exit-img{
+				height: 10vw;
+			}
+			.exit-img:hover{
+				content: url("images/Exit2.png")
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="main">
+			<img src="images/project.png" class="foreground-img"/>
+			<button class="close-btn2">
+				<img src="images/Exit.png" class="exit-img"/>
+			</button>
+		</div>
+		<script>
+			document.querySelector('.close-btn2').addEventListener('click', () => {
+			  window.location.href = 'index.html';
+			});
+		</script>
+	</body>
+</html>
